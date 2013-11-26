@@ -1,0 +1,13 @@
+<%= f.label :name, "Name" %>
+<%= f.text_field :name %>
+
+<%= f.label :desc, "Description" %>
+<%= f.text_area :desc %>
+
+<% if @event.errors.any? %>
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+<% end %>
